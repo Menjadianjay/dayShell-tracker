@@ -1,0 +1,8 @@
+.env
+key.json
+# *.db
+dayshell/
+logs/
+backups/
+.clasprc.json
+__pycache__/
