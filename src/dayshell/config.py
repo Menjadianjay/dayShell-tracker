@@ -1,4 +1,3 @@
-"""Reads settings from .env. Relative paths are resolved from the repo root."""
 import os
 from pathlib import Path
 
@@ -6,7 +5,6 @@ from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(ROOT / ".env")
-
 
 def _path(value: str) -> Path:
     p = Path(value)
@@ -21,7 +19,6 @@ SUPABASE_SERVICE_KEY = (os.environ.get("SUPABASE_SERVICE_KEY") or "").strip() or
 
 
 def require(*names: str) -> None:
-    """Raise a clear error if any named setting is empty."""
     missing = [n for n in names if not globals().get(n)]
     if missing:
         raise RuntimeError(
