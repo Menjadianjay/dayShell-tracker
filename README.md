@@ -155,4 +155,4 @@ Schema changes touch several files and must follow the order in
 
 ## License
 
-The repository has no LICENSE file, so no license is specified.
+The repository released under unlicensed.
