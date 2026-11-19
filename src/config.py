@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-
 from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -23,5 +22,4 @@ def require(*names: str) -> None:
     if missing:
         raise RuntimeError(
             f"Missing in .env: {', '.join(missing)}. "
-            "See docs/configuration.md for the full list."
-        )
+            "See docs/configuration.md for the full list.")
